@@ -91,6 +91,65 @@ O BitNote **nao usa apenas ECDSA** - implementa **algoritmos NIST PQC** desde o 
 
 ---
 
+## 3.4. Granularidade em Centavos de Dólar
+
+O BitNote suporta **valores fixos em satoshis equivalentes a centavos de dólar**, permitindo troco físico com precisão de **1 centavo americano**:
+
+| Valor em USD | Satoshis (aprox.) | Uso Comum |
+|--------------|-------------------|----------|
+| **$0.01**    | ~1.000 sats       | Goma de mascar |
+| **$0.05**    | ~5.000 sats       | Café expresso |
+| **$0.25**    | ~25.000 sats      | Pão na padaria |
+| **$1.00**    | ~100.000 sats     | Almoço rápido |
+
+> **Como funciona:**  
+> - O dispositivo armazena **múltiplos slots** com valores pré-definidos.  
+> - Ex: 20 slots de $0.01, 15 de $0.05, 10 de $0.25, 5 de $1.00  
+> - Total: **100 slots = $50 em notas digitais**
+
+---
+
+## 3.5. Exemplo de Transação do Dia a Dia: Pagar um Café
+
+**Cenário:** Você vai a uma cafeteria. O café custa **$2,35**.
+
+| Passo | Ação |
+|-------|------|
+| 1 | Você seleciona no seu BitNote:  
+   → 2x $1.00 + 1x $0.25 + 1x $0.10 + 1x $0.05 = **$2,40** |
+| 2 | Toca seu BitNote no terminal da cafeteria (NFC) |
+| 3 | O terminal recebe **5 chaves privadas** (5 slots) |
+| 4 | Seu BitNote **apaga irreversivelmente** os 5 slots |
+| 5 | Cafeteria devolve **$0,05 em troco** (1 slot de 5.000 sats) |
+| 6 | LED verde: "Pagamento concluído" |
+
+> **Resultado:**  
+> - **Sem internet**  
+> - **Sem taxa**  
+> - **Sem rastreio**  
+> - **Troco físico instantâneo**
+
+---
+
+## 3.6. Futuro: Transferência Remota (LoRaWAN ou Internet)
+
+O BitNote **não ficará limitado ao NFC**. Futuras versões incluirão:
+
+| Tecnologia | Alcance | Segurança |
+|-----------|--------|----------|
+| **LoRaWAN** | 1–10 km | Criptografia PQC (Kyber + Dilithium) + autenticação mútua |
+| **Internet (via app)** | Global | Túnel zero-knowledge + assinatura atômica |
+
+> **Protocolo seguro (em desenvolvimento):**  
+> - Prova de posse via assinatura PQC  
+> - Wipe local após confirmação remota  
+> - Fallback para NFC se rede cair
+
+**Exemplo futuro:**  
+> Enviar $5 para um amigo em outra cidade via LoRaWAN — **off-chain, sem custodiante, com wipe irreversível**.
+
+---
+
 ## 4. Seguranca Total (Camadas)
 
 | Camada         | Protecao                              |
