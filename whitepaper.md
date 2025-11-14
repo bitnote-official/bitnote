@@ -137,6 +137,10 @@ O BitNote **nao usa apenas ECDSA** - implementa **algoritmos NIST PQC** desde o 
 
 ---
 
+**Status Timestamp:** Pending confirmação (tx no mempool, 14/11/2025). Bloco esperado: ~#869XXX. Verifique em opentimestamps.org.
+
+---
+
 ## 8. Licenca e Contribuicao
 MIT License
 Copyright (c) 2025 bitnote-official
