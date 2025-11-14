@@ -2,10 +2,10 @@
 **Bearer Assets Off-Chain com Secure Elements**
 
 **Autor:** Akira-kun
-**Data:** 13 de novembro de 2025  
-**GitHub:** github.com/bitnote-official/bitnote  
-**Site:** bitnote-official.github.io/bitnote  
-**Licença:** MIT — Use, modifique, fabrique livremente  
+**Data:** 13 de novembro de 2025
+**GitHub:** github.com/bitnote-official/bitnote
+**Site:** bitnote-official.github.io/bitnote
+**Licença:** MIT — Use, modifique, fabrique livremente
 
 ---
 
@@ -16,9 +16,9 @@ Troco físico em satoshis. **100% não-custodial**.
 ---
 
 ## Problema
-Bitcoin não é dinheiro de bolso:  
+Bitcoin não é dinheiro de bolso:
 - Transações on-chain: lentas e caras
-- Lightning: precisa de internet  
+- Lightning: precisa de internet
 - Ecash: custodial
 
 ---
@@ -35,7 +35,7 @@ Bitcoin não é dinheiro de bolso:
 ## Protocolo
 1. A → B: `slot_id`, `address`, `ECDSA signature`
 2. B verifica → armazena no secure element
-3. B confirma → A apaga slot  
+3. B confirma → A apaga slot
 4. LED: "Transferência concluída"
 
 ---
